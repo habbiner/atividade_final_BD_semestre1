@@ -1,0 +1,144 @@
+CREATE TABLE `fatec`.`amostra` (
+  `id_amostra` INT NOT NULL AUTO_INCREMENT,
+  `numero_amostra` INT NOT NULL,
+  `nome_estudo` VARCHAR(45) NOT NULL,
+  `especie_animal` VARCHAR(100) NOT NULL,
+  `nome_animal` VARCHAR(45) NOT NULL,
+  `idade_animal` INT NOT NULL,
+  `sexo_animal` VARCHAR(45) NOT NULL,
+  `qualidade_do_envio` VARCHAR(45) NOT NULL,
+  `qualidade_das_amostras` VARCHAR(45) NOT NULL,
+  `material` VARCHAR(45) NOT NULL,
+  `data_entrada` DATE NOT NULL,
+  `data_coleta` DATE NOT NULL,
+  `quantidade_amostras` INT NOT NULL,
+  `exames_solicitados` VARCHAR(100) NOT NULL,
+  `id_veterinario` INT NOT NULL,
+  `id_biomedico` INT NOT NULL,
+  PRIMARY KEY (`id_amostra`));
+
+
+CREATE TABLE `fatec`.`fazenda` (
+  `id_fazenda` INT NOT NULL AUTO_INCREMENT,
+  `nome_fazenda` VARCHAR(100) NOT NULL,
+  `localizacao` POINT NOT NULL,
+  `proprietario` VARCHAR(45) NOT NULL,
+  `telefone` VARCHAR(13) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `id_amostra` INT NOT NULL,
+  `id_veterinario` INT NOT NULL,
+  `id_biomedico` INT NOT NULL,
+  PRIMARY KEY (`id_fazenda`));
+
+
+CREATE TABLE `fatec`.`resultado` (
+  `id_resultado` INT NOT NULL AUTO_INCREMENT,
+  `cod_laudo` VARCHAR(45) NOT NULL,
+  `biomedico_responsavel` VARCHAR(100) NOT NULL,
+  `status_laudo` VARCHAR(45) NOT NULL,
+  `data_liberacao` DATE NOT NULL,
+  `logbook` VARCHAR(45) NOT NULL,
+  `id_amostra` INT NOT NULL,
+  `id_veterinario_solicitante` INT NOT NULL,
+  `id_fazenda` INT NOT NULL, 
+  `id_biomedico` INT NOT NULL,
+  PRIMARY KEY (`id_resultado`));
+
+
+CREATE TABLE `fatec`.`biomedico` (
+  `id_biomedico` INT NOT NULL AUTO_INCREMENT,
+  `nome_biomedico` VARCHAR(100) NOT NULL,
+  `rg_biomedico` VARCHAR(9) NOT NULL,
+  `cpf_biomedico` VARCHAR(11) NOT NULL,
+  `email_biomedico` VARCHAR(100) NOT NULL,
+  `crbm` VARCHAR(8) NOT NULL,
+  `endereco_biomedico` VARCHAR(100) NOT NULL,
+  `especialidade_biomedico` VARCHAR(45) NOT NULL,
+  `telefone_biomedico` VARCHAR(13) NOT NULL,
+  PRIMARY KEY (`id_biomedico`));
+
+
+CREATE TABLE `fatec`.`veterinario` (
+  `id_veterinario` INT NOT NULL AUTO_INCREMENT,
+  `nome_veterinario` VARCHAR(100) NOT NULL,
+  `rg_veterinario` VARCHAR(9) NOT NULL,
+  `cpf_veterinario` VARCHAR(11) NOT NULL,
+  `email_veterinario` VARCHAR(100) NOT NULL,
+  `crmv` VARCHAR(10) NOT NULL,
+  `endereco_veterinario` VARCHAR(100) NOT NULL,
+  `especialidade_veterinario` VARCHAR(45) NOT NULL,
+  `telefone_veterinario` VARCHAR(13) NOT NULL,
+  `nome_estudo` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_veterinario`));
+
+
+CREATE TABLE `fatec`.`veterinario_resultado` (
+  `id_veterinario` INT NOT NULL,
+  `id_resultado` INT NOT NULL,
+  `id_amostra` INT NOT NULL,
+  `id_veterinario_solicitante` INT NOT NULL,
+  `id_fazenda` INT NOT NULL,
+  `id_biomedico` INT NOT NULL);
+
+
+CHAVES ESTRANGEIRAS
+
+alter table amostra
+add foreign key (id_veterinario)
+references veterinario (id_veterinario);
+
+alter table amostra
+add foreign key (id_biomedico)
+references biomedico (id_biomedico);
+
+alter table fazenda
+add foreign key (id_amostra)
+references amostra (id_amostra);
+
+alter table fazenda
+add foreign key (id_veterinario)
+references veterinario (id_veterinario);
+
+alter table fazenda
+add foreign key (id_biomedico)
+references biomedico (id_biomedico);
+
+alter table resultado
+add foreign key (id_amostra)
+references amostra (id_amostra);
+
+alter table resultado
+add foreign key (id_veterinario_solicitante)
+references veterinario (id_veterinario);
+
+alter table resultado
+add foreign key (id_fazenda)
+references fazenda (id_fazenda);
+
+alter table resultado
+add foreign key (id_biomedico)
+references biomedico (id_biomedico);
+
+alter table veterinario_resultado
+add foreign key (id_veterinario)
+references veterinario (id_veterinario);
+
+alter table veterinario_resultado
+add foreign key (id_resultado)
+references resultado (id_resultado);
+
+alter table veterinario_resultado
+add foreign key (id_amostra)
+references amostra (id_amostra);
+
+alter table veterinario_resultado
+add foreign key (id_veterinario_solicitante)
+references amostra (id_veterinario);
+
+alter table veterinario_resultado
+add foreign key (id_fazenda)
+references fazenda (id_fazenda);
+
+alter table veterinario_resultado
+add foreign key (id_biomedico)
+references biomedico (id_biomedico);

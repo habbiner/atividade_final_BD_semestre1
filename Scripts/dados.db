@@ -1,0 +1,148 @@
+select * from biomedico;
+
+INSERT INTO biomedico (nome_biomedico, rg_biomedico, cpf_biomedico, email_biomedico, crbm, endereco_biomedico, especialidade_biomedico, telefone_biomedico)
+VALUES
+  ('João Silva', '123456789', '12345678901', 'joao@exemplo.com', '87901234', 'Rua A, 123', 'Animal', '987654321'),
+  ('Maria Souza', '987654321', '98765432109', 'maria@exemplo.com', '87905678', 'Rua B, 456', 'Humana', '123456789'),
+  ('Lucas Oliveira', '345678901', '34567890123', 'lucas@gmail.com', '123456', 'Rua C, 789', 'Animal', '987654321'),
+  ('Camila Santos', '567890123', '56789012345', 'camila@outlook.com', '567890', 'Rua D, 012', 'Humana', '789012345'),
+  ('Felipe Lima', '789012345', '78901234567', 'felipe@hotmail.com', '234567', 'Rua E, 456', 'Animal', '654321987'),
+  ('Julia Pereira', '901234567', '90123456789', 'julia@gmail.com', '345678', 'Rua F, 789', 'Humana', '987654321'),
+  ('Gustavo Souza', '123456789', '12345678901', 'gustavo@outlook.com', '456789', 'Rua G, 012', 'Animal', '123456789'),
+  ('Mariana Santos', '234567890', '23456789012', 'mariana@hotmail.com', '567890', 'Rua H, 123', 'Humana', '789012345'),
+  ('Lucas Oliveira', '345678901', '34567890123', 'lucas@gmail.com', '678901', 'Rua I, 456', 'Animal', '654321987'),
+  ('Carlos Lima', '456789012', '45678901234', 'carlos@outlook.com', '789012', 'Rua J, 789', 'Humana', '987654321'),
+  ('Amanda Pereira', '567890123', '56789012345', 'amanda@hotmail.com', '890123', 'Rua K, 012', 'Animal', '123456789'),
+  ('Gabriel Souza', '678901234', '67890123456', 'gabriel@gmail.com', '901234', 'Rua L, 123', 'Humana', '789012345'),
+  ('Sophia Santos', '789012345', '78901234567', 'sophia@outlook.com', '123456', 'Rua M, 456', 'Animal', '654321987'),
+  ('Enzo Lima', '890123456', '89012345678', 'enzo@hotmail.com', '234567', 'Rua N, 789', 'Humana', '987654321'),
+  ('Isabela Pereira', '901234567', '90123456789', 'isabela@gmail.com', '345678', 'Rua O, 012', 'Animal', '123456789'),
+  ('Daniel Souza', '123456789', '12345678901', 'daniel@outlook.com', '456789', 'Rua P, 123', 'Humana', '654321987'),
+  ('Manuela Santos', '234567890', '23456789012', 'manuela@hotmail.com', '567890', 'Rua Q, 456', 'Animal', '789012345'),
+  ('Pedro Oliveira', '345678901', '34567890123', 'pedro@gmail.com', '678901', 'Rua R, 789', 'Humana', '123456789'),
+  ('Larissa Lima', '456789012', '45678901234', 'larissa@outlook.com', '789012', 'Rua S, 012', 'Animal', '654321987'),
+  ('Matheus Pereira', '567890123', '56789012345', 'matheus@hotmail.com', '890123', 'Rua T, 123', 'Humana', '987654321'),
+  ('Laura Souza', '678901234', '67890123456', 'laura@gmail.com', '901234', 'Rua U, 456', 'Animal', '123456789'),
+  ('Vinicius Santos', '789012345', '78901234567', 'vinicius@outlook.com', '123456', 'Rua V, 789', 'Humana', '654321987');
+
+
+INSERT INTO veterinario (nome_veterinario, rg_veterinario, cpf_veterinario, email_veterinario, crmv, endereco_veterinario, especialidade_veterinario, telefone_veterinario, nome_estudo)
+VALUES
+  ('Carlos Oliveira', '345678901', '34567890123', 'carlos@exemplo.com', '96847126', 'Rua C, 789', 'Animal', '654321987', 'Estudo1'),
+  ('Fernanda Santos', '567890123', '56789012345', 'fernanda@exemplo.com', '56443122', 'Rua D, 012', 'Humana', '789012345', 'Estudo2'),
+  ('Ana Lima', '345678901', '34567890123', 'ana@gmail.com', '16243124', 'Rua X, 123', 'Animais de Grande Porte', '987654321', 'Estudo3'),
+  ('Ricardo Santos', '567890123', '56789012345', 'ricardo@outlook.com', '56647128', 'Rua Y, 456', 'Animais de Pequeno Porte', '789012345', 'Estudo4'),
+  ('Fernanda Souza', '789012345', '78901234567', 'fernanda@hotmail.com', '26344125', 'Rua Z, 789', 'Animais de Grande Porte', '654321987', 'Estudo5'),
+  ('Marcelo Oliveira', '901234567', '90123456789', 'marcelo@gmail.com', '66748129', 'Rua W, 012', 'Animais de Pequeno Porte', '987654321', 'Estudo6'),
+  ('Luciana Lima', '123456789', '12345678901', 'luciana@outlook.com', '36445126', 'Rua M, 345', 'Animais de Grande Porte', '123456789', 'Estudo7'),
+  ('Rodrigo Santos', '234567890', '23456789012', 'rodrigo@hotmail.com', '76849120', 'Rua N, 678', 'Animais de Pequeno Porte', '789012345', 'Estudo8'),
+  ('Aline Oliveira', '345678901', '34567890123', 'aline@gmail.com', '46546127', 'Rua O, 901', 'Animais de Grande Porte', '654321987', 'Estudo9'),
+  ('Gustavo Lima', '456789012', '45678901234', 'gustavo@outlook.com', '86940121', 'Rua P, 234', 'Animais de Pequeno Porte', '987654321', 'Estudo10'),
+  ('Bianca Santos', '567890123', '56789012345', 'bianca@hotmail.com', '26344125', 'Rua Q, 567', 'Animais de Grande Porte', '123456789', 'Estudo11'),
+  ('Eduardo Souza', '678901234', '67890123456', 'eduardo@gmail.com', '66748129', 'Rua R, 890', 'Animais de Pequeno Porte', '789012345', 'Estudo12'),
+  ('Tatiane Lima', '789012345', '78901234567', 'tatiane@outlook.com', '16243124', 'Rua S, 012', 'Animais de Grande Porte', '654321987', 'Estudo13'),
+  ('Alexandre Santos', '890123456', '89012345678', 'alexandre@hotmail.com', '56647128', 'Rua T, 345', 'Animais de Pequeno Porte', '987654321', 'Estudo14'),
+  ('Carla Oliveira', '901234567', '90123456789', 'carla@gmail.com', '96041122', 'Rua U, 678', 'Animais de Grande Porte', '123456789', 'Estudo15'),
+  ('Vinicius Lima', '123456789', '12345678901', 'vinicius@outlook.com', '36445126', 'Rua V, 901', 'Animais de Pequeno Porte', '654321987', 'Estudo16'),
+  ('Cristiane Santos', '234567890', '23456789012', 'cristiane@hotmail.com', '76849120', 'Rua W, 234', 'Animais de Grande Porte', '987654321', 'Estudo17'),
+  ('Fábio Oliveira', '345678901', '34567890123', 'fabio@gmail.com', '46546127', 'Rua X, 567', 'Animais de Pequeno Porte', '123456789', 'Estudo18'),
+  ('Renata Lima', '456789012', '45678901234', 'renata@outlook.com', '86940121', 'Rua Y, 890', 'Animais de Grande Porte', '789012345', 'Estudo19'),
+  ('Paulo Santos', '567890123', '56789012345', 'paulo@hotmail.com', '26344125', 'Rua Z, 012', 'Animais de Pequeno Porte', '654321987', 'Estudo20'),
+  ('Gabriela Souza', '678901234', '67890123456', 'gabriela@gmail.com', '66748129', 'Rua A, 345', 'Animais de Grande Porte', '987654321', 'Estudo21');
+
+
+INSERT INTO amostra (numero_amostra, nome_estudo, especie_animal, nome_animal, idade_animal, sexo_animal, qualidade_do_envio, qualidade_das_amostras, material, data_entrada, data_coleta, quantidade_amostras, exames_solicitados, id_veterinario, id_biomedico)
+VALUES
+  (1, 'Estudo1', 'Bovino', 'Mimosa', 3, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-01', '2022-12-15', 3, 'Hemograma completo, Perfil Bioquímico', 1, 1),
+  (2, 'Estudo2', 'Equino', 'Alasão', 5, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-02', '2022-12-16', 2, 'Hemograma completo, Microbiológico', 2, 2),
+  (3, 'Estudo3', 'Suíno', '10', 2, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-03', '2022-12-17', 1, 'Perfil Bioquímico', 3, 3),
+  (4, 'Estudo4', 'Ovino', 'Bravo', 4, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-04', '2022-12-18', 2, 'Hemograma completo, Perfil Bioquímico', 4, 4),
+  (5, 'Estudo5', 'Bovino', '55', 3, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-05', '2022-12-19', 1, 'Microbiológico', 5, 5),
+  (6, 'Estudo6', 'Suíno', '13', 1, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-06', '2022-12-20', 3, 'Hemograma completo, Microbiológico, Perfil Bioquímico', 6, 6),
+  (7, 'Estudo7', 'Equino', 'Relampago', 6, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-07', '2022-12-21', 2, 'Perfil Bioquímico, Microbiológico', 7, 7),
+  (8, 'Estudo8', 'Ovino', '76', 2, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-08', '2022-12-22', 1, 'Hemograma completo', 8, 8),
+  (9, 'Estudo9', 'Bovino', '120', 4, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-09', '2022-12-23', 3, 'Hemograma completo, Perfil Bioquímico, Microbiológico', 9, 9),
+  (10, 'Estudo10', 'Suíno', '45', 3, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-10', '2022-12-24', 2, 'Perfil Bioquímico, Microbiológico', 10, 10),
+  (11, 'Estudo11', 'Equino', 'Dore', 5, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-11', '2022-12-25', 1, 'Hemograma completo', 11, 11),
+  (12, 'Estudo12', 'Ovino', '3', 2, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-12', '2022-12-26', 2, 'Microbiológico, Perfil Bioquímico', 12, 12),
+  (13, 'Estudo13', 'Bovino', '4', 3, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-13', '2022-12-27', 3, 'Hemograma completo, Perfil Bioquímico, Microbiológico', 13, 13),
+  (14, 'Estudo14', 'Suíno', '38', 4, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-14', '2022-12-28', 1, 'Hemograma completo', 14, 14),
+  (15, 'Estudo15', 'Equino', '55', 3, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-15', '2022-12-29', 2, 'Perfil Bioquímico, Microbiológico', 15, 15),
+  (16, 'Estudo16', 'Ovino', 'JA 22', 5, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-16', '2022-12-30', 3, 'Hemograma completo, Perfil Bioquímico, Microbiológico', 16, 16),
+  (17, 'Estudo17', 'Bovino', 'Charlotte', 2, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-17', '2022-12-31', 1, 'Microbiológico', 17, 17),
+  (18, 'Estudo18', 'Suíno', '98', 4, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-18', '2023-01-01', 2, 'Hemograma completo, Perfil Bioquímico', 18, 18),
+  (19, 'Estudo19', 'Equino', '53', 3, 'Fêmea', 'Conforme', 'Conforme', 'Sangue', '2023-01-19', '2023-01-02', 1, 'Perfil Bioquímico', 19, 19),
+  (20, 'Estudo20', 'Ovino', '71', 6, 'Macho', 'Conforme', 'Conforme', 'Sangue', '2023-01-20', '2023-01-03', 3, 'Hemograma completo, Microbiológico, Perfil Bioquímico', 20, 20);
+
+
+INSERT INTO fazenda (nome_fazenda, localizacao, proprietario, telefone, email, id_amostra, id_veterinario, id_biomedico)
+VALUES
+  ('Fazenda A', POINT(-23.5505, -46.6333), 'Proprietário A', '987654321', 'fazenda_a@gmail.com', 1, 1, 1),
+  ('Fazenda B', POINT(-22.9068, -43.1729), 'Proprietário B', '123456789', 'fazenda_b@gmail.com', 2, 2, 2),
+  ('Fazenda C', POINT(-23.5505, -46.6333), 'Proprietário C', '987654321', 'fazenda_c@gmail.com', 3, 3, 3),
+  ('Fazenda D', POINT(-22.9068, -43.1729), 'Proprietário D', '123456789', 'fazenda_d@gmail.com', 4, 4, 4),
+  ('Fazenda E', POINT(-23.5505, -46.6333), 'Proprietário E', '987654321', 'fazenda_e@gmail.com', 5, 5, 5),
+  ('Fazenda F', POINT(-22.9068, -43.1729), 'Proprietário F', '123456789', 'fazenda_f@gmail.com', 6, 6, 6),
+  ('Fazenda G', POINT(-23.5505, -46.6333), 'Proprietário G', '987654321', 'fazenda_g@outlook.com', 7, 7, 7),
+  ('Fazenda H', POINT(-22.9068, -43.1729), 'Proprietário H', '123456789', 'fazenda_h@outlook.com', 8, 8, 8),
+  ('Fazenda I', POINT(-23.5505, -46.6333), 'Proprietário I', '987654321', 'fazenda_i@outlook.com', 9, 9, 9),
+  ('Fazenda J', POINT(-22.9068, -43.1729), 'Proprietário J', '123456789', 'fazenda_j@sap.com', 10, 10, 10),
+  ('Fazenda K', POINT(-23.5505, -46.6333), 'Proprietário K', '987654321', 'fazenda_k@outlook.com', 11, 11, 11),
+  ('Fazenda L', POINT(-22.9068, -43.1729), 'Proprietário L', '123456789', 'fazenda_l@outlook.com', 12, 12, 12),
+  ('Fazenda M', POINT(-23.5505, -46.6333), 'Proprietário M', '987654321', 'fazenda_m@uol.com', 13, 13, 13),
+  ('Fazenda N', POINT(-22.9068, -43.1729), 'Proprietário N', '123456789', 'fazenda_n@hotmail.com', 14, 14, 14),
+  ('Fazenda O', POINT(-23.5505, -46.6333), 'Proprietário O', '987654321', 'fazenda_o@hotmail.com', 15, 15, 15),
+  ('Fazenda P', POINT(-22.9068, -43.1729), 'Proprietário P', '123456789', 'fazenda_p@gmail.com', 16, 16, 16),
+  ('Fazenda Q', POINT(-23.5505, -46.6333), 'Proprietário Q', '987654321', 'fazenda_q@hotmail.com', 17, 17, 17),
+  ('Fazenda R', POINT(-22.9068, -43.1729), 'Proprietário R', '123456789', 'fazenda_r@hotmail.com', 18, 18, 18),
+  ('Fazenda S', POINT(-23.5505, -46.6333), 'Proprietário S', '987654321', 'fazenda_s@gmail.com', 19, 19, 19),
+  ('Fazenda T', POINT(-22.9068, -43.1729), 'Proprietário T', '123456789', 'fazenda_t@uol.com', 20, 20, 20),
+  ('Fazenda U', POINT(-23.5505, -46.6333), 'Proprietário U', '987654321', 'fazenda_u@uol.com', 1, 1, 1);
+
+
+INSERT INTO resultado (cod_laudo, biomedico_responsavel, status_laudo, data_liberacao, logbook, id_amostra, id_veterinario_solicitante, id_fazenda, id_biomedico)
+VALUES
+  ('LAUDO123', 'Maria Souza', 'Concluído', '2023-01-05', 'Sim', 1, 1, 1, 1),
+  ('LAUDO456', 'João Silva', 'Pendente', '2023-01-06', 'Não', 2, 2, 2, 2),
+  ('LAUDO789', 'João Silva', 'Concluído', '2023-01-10', 'Sim', 3, 3, 3, 3),
+  ('LAUDO012', 'Maria Souza', 'Pendente', '2023-01-11', 'Não', 4, 4, 4, 4),
+  ('LAUDO345', 'Ana Lima', 'Concluído', '2023-01-12', 'Sim', 5, 5, 5, 5),
+  ('LAUDO678', 'Ricardo Santos', 'Pendente', '2023-01-13', 'Não', 6, 6, 6, 6),
+  ('LAUDO901', 'Fernanda Souza', 'Concluído', '2023-01-14', 'Sim', 7, 7, 7, 7),
+  ('LAUDO234', 'Marcelo Oliveira', 'Pendente', '2023-01-15', 'Não', 8, 8, 8, 8),
+  ('LAUDO567', 'Luciana Lima', 'Concluído', '2023-01-16', 'Sim', 9, 9, 9, 9),
+  ('LAUDO890', 'Rodrigo Santos', 'Pendente', '2023-01-17', 'Não', 10, 10, 10, 10),
+  ('LAUDO123', 'Aline Oliveira', 'Concluído', '2023-01-18', 'Sim', 11, 11, 11, 11),
+  ('LAUDO456', 'Gustavo Lima', 'Pendente', '2023-01-19', 'Não', 12, 12, 12, 12),
+  ('LAUDO789', 'Bianca Santos', 'Concluído', '2023-01-20', 'Sim', 13, 13, 13, 13),
+  ('LAUDO012', 'Eduardo Souza', 'Pendente', '2023-01-21', 'Não', 14, 14, 14, 14),
+  ('LAUDO345', 'Tatiane Lima', 'Concluído', '2023-01-22', 'Sim', 15, 15, 15, 15),
+  ('LAUDO678', 'Alexandre Santos', 'Pendente', '2023-01-23', 'Não', 16, 16, 16, 16),
+  ('LAUDO901', 'Carla Oliveira', 'Concluído', '2023-01-24', 'Sim', 17, 17, 17, 17),
+  ('LAUDO234', 'Bruno Lima', 'Pendente', '2023-01-25', 'Não', 18, 18, 18, 18),
+  ('LAUDO567', 'Daniela Santos', 'Concluído', '2023-01-26', 'Sim', 19, 19, 19, 19),
+  ('LAUDO890', 'Fábio Oliveira', 'Pendente', '2023-01-27', 'Não', 20, 20, 20, 20);
+
+
+INSERT INTO veterinario_resultado (id_veterinario, id_resultado, id_amostra, id_veterinario_solicitante, id_fazenda, id_biomedico)
+VALUES
+  (1, 1, 1, 1, 1, 1),
+  (2, 2, 2, 2, 2, 2),
+  (3, 3, 3, 3, 3, 3),
+  (4, 4, 4, 4, 4, 4),
+  (5, 5, 5, 5, 5, 5),
+  (6, 6, 6, 6, 6, 6),
+  (7, 7, 7, 7, 7, 7),
+  (8, 8, 8, 8, 8, 8),
+  (9, 9, 9, 9, 9, 9),
+  (10, 10, 10, 10, 10, 10),
+  (11, 11, 11, 11, 11, 11),
+  (12, 12, 12, 12, 12, 12),
+  (13, 13, 13, 13, 13, 13),
+  (14, 14, 14, 14, 14, 14),
+  (15, 15, 15, 15, 15, 15),
+  (16, 16, 16, 16, 16, 16),
+  (17, 17, 17, 17, 17, 17),
+  (18, 18, 18, 18, 18, 18),
+  (19, 19, 19, 19, 19, 19),
+  (20, 20, 20, 20, 20, 20);
